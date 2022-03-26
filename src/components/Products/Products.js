@@ -50,23 +50,23 @@ const Products = () => {
             </div>
 
             <div className='card-container'>
-                <div className='order-container'>
-                    <h3>Order Summary</h3>
-                    <div>
-                        {
-                            cart.map(info =>
-                                <div>
-                                    <p> {info.name}</p>
-                                </div>)
-                        }
-                    </div>
-                    <button onClick={() => RandomProduct(cart)}>choose 1 <FontAwesomeIcon icon={faSquareCheck}></FontAwesomeIcon></button>
-                    <button onClick={() => ClearData(cart)}> clear all <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
-                    <div>
-                        <p>{randomp.name}</p>
-                    </div>
 
+                <h3>Order Summary</h3>
+                <div>
+                    {
+                        cart.map(info =>
+                            <div>
+                                <p> {info.name}</p>
+                            </div>)
+                    }
                 </div>
+                <button onClick={() => RandomProduct(cart)}>choose 1 <FontAwesomeIcon icon={faSquareCheck}></FontAwesomeIcon></button>
+                <button onClick={() => ClearData(cart)}> clear all <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
+                <div>
+                    <p>{randomp.name}</p>
+                </div>
+
+
 
             </div>
         </div>

@@ -1,0 +1,16 @@
+.propVSstate{
+    padding: 20px;
+    margin: 50px;
+    text-align: center;
+    border: 2px solid #c69aee;
+    border-radius: 8px;
+}
+@media screen and (max-with:600px) {
+    .propVSstate{
+        display: grid;
+        grid-template-columns: repeat(1fr 1fr);
+        grid-gap:10px;
+        margin: 5px;
+    }
+    
+}

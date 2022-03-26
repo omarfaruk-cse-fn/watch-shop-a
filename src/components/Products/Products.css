@@ -12,3 +12,16 @@
     background-color: antiquewhite;
     padding: 10px;
 }
+
+@media screen and (max-with:600px) {
+    .shop-container{
+        display: grid;
+        grid-template-columns:1fr 0fr
+    } 
+    .products{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:5px;
+        margin: 5px;
+    }
+}

@@ -1,15 +1,12 @@
-.menu{
+.reactWork{
+    padding: 20px;
+    margin: 50px;
     text-align: center;
-}
-.menu span{
-    color: blueviolet;
-}
-.menu big{
-    color: #f1b65c;
+    border: 2px solid #c69aee;
+    border-radius: 8px;
 }
 @media screen and (max-with:600px) {
-    .menu{
-        max-width: 550px;
+    .reactWork{
         display: grid;
         grid-template-columns:(1fr);
         grid-gap:10px;
