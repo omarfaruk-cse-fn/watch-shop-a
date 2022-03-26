@@ -27,10 +27,11 @@ const Products = () => {
     })
 
     //finding random value 
-    const [random, setRandom] = useState([])
+    const [randomp, setRandom] = useState([])
     const RandomProduct = (cart) => {
-        console.log(cart)
-
+        let randomNumber = Math.floor(Math.random() * cart.length)
+        console.log(randomNumber)
+        setRandom(cart[randomNumber])
     }
     return (
         <div className='shop-container'>
@@ -52,9 +53,13 @@ const Products = () => {
                             </div>)
                     }
                 </div>
-                <button onClick={() => RandomProduct(cart.name)}>choose 1 <FontAwesomeIcon icon={faSquareCheck}></FontAwesomeIcon></button>
-                <button> clear all <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
-                <h4></h4>
+                <button onClick={() => RandomProduct(cart)}>choose 1 <FontAwesomeIcon icon={faSquareCheck}></FontAwesomeIcon></button>
+                <button > clear all <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
+                <div>
+
+                    <p>{randomp.name}</p>
+
+                </div>
             </div>
         </div>
 
