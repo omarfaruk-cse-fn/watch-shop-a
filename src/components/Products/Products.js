@@ -33,6 +33,12 @@ const Products = () => {
         console.log(randomNumber)
         setRandom(cart[randomNumber])
     }
+    //clear data 
+    const [clData, setClData] = useState([])
+    const ClearData = (cart) => {
+        cart = []
+        setClData(cart)
+    }
     return (
         <div className='shop-container'>
             <div className='products'>
@@ -44,22 +50,24 @@ const Products = () => {
             </div>
 
             <div className='card-container'>
-                <h3>Order Summary</h3>
-                <div>
-                    {
-                        cart.map(info =>
-                            <div>
-                                <p> {info.name}</p>
-                            </div>)
-                    }
-                </div>
-                <button onClick={() => RandomProduct(cart)}>choose 1 <FontAwesomeIcon icon={faSquareCheck}></FontAwesomeIcon></button>
-                <button > clear all <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
-                <div>
+                <div className='order-container'>
+                    <h3>Order Summary</h3>
+                    <div>
+                        {
+                            cart.map(info =>
+                                <div>
+                                    <p> {info.name}</p>
+                                </div>)
+                        }
+                    </div>
+                    <button onClick={() => RandomProduct(cart)}>choose 1 <FontAwesomeIcon icon={faSquareCheck}></FontAwesomeIcon></button>
+                    <button onClick={() => ClearData(cart)}> clear all <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
+                    <div>
+                        <p>{randomp.name}</p>
+                    </div>
 
-                    <p>{randomp.name}</p>
-
                 </div>
+
             </div>
         </div>
 
