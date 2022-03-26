@@ -1,18 +1,19 @@
 .product{
-    border: 3px solid blueviolet;
+    border: 3px solid rgb(214, 186, 240);
     border-radius: 8px;
     padding: 5px;
-    background-color: #CAD5E2;
+    background-color: #ece8e8;
 }
 .product img{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 8px;
+    margin: auto;
 }
 .product button{
     padding: 8px 10px;
     border-radius: 8px;
 }
 .product button:hover{
-    background-color: cyan;
+    background-color: #f8e5cc;
 }
